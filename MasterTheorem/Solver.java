@@ -41,7 +41,16 @@ public class Solver {
         } else if (p < k) {
             result = formatPolyLog(k, i);
         } else if (p > k) {
-            result = "n^log_" + b + "(" + a + ")";
+            if (nearlyEqual(Math.round(p), p)) {
+                result = formatPolyLog(Math.round(p), 0);
+            } else {
+                result = "n^log_" + b + "(" + a + ")";
+            }
+        }
+
+        if (result == null) {
+            System.out.println("Error! Try the Javascript version in the Other folder");
+            return;
         }
 
         System.out.println("T(n) in θ(" + result + ")");
@@ -58,6 +67,8 @@ public class Solver {
             sb.append("sqrt(n)"); 
         } else if (k == 1) {
             sb.append("n");
+        } else if (k > 1) {
+            sb.append("n^" + k);
         }
 
         if (i != 0) {
