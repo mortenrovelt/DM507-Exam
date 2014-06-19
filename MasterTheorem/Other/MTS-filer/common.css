@@ -1,0 +1,102 @@
+/* Reset */
+
+html, body, div,
+h1, h2, h3,
+p,
+ul, ol, li,
+dl, dt, dd,
+table, thead, tbody, tfoot, tr, th, td,
+pre, blockquote,
+img, object, iframe, hr,
+abbr {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: transparent;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+input, select, textarea {
+	margin: 0;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+}
+
+html {
+	font-size: 100%;
+	font-weight: normal;
+	line-height: normal;
+}
+
+article, footer, header, nav, section {
+	display: block;  /* Pre-HTML5 compatibility */
+}
+
+time {
+	display: inline;  /* Pre-HTML5 compatibility */
+}
+
+del, ins {
+	text-decoration: none;
+}
+
+
+/* Content */
+
+table {
+	display: block;  /* To make Firefox collapse the table's vertical margins with adjacent elements */
+}
+
+td, th {
+	vertical-align: top;
+}
+
+table.col1right td:nth-child(1) { text-align: right; }
+table.col2right td:nth-child(2) { text-align: right; }
+table.col3right td:nth-child(3) { text-align: right; }
+table.col4right td:nth-child(4) { text-align: right; }
+table.col5right td:nth-child(5) { text-align: right; }
+table.col5right td:nth-child(6) { text-align: right; }
+
+code {
+	white-space: pre-wrap;
+}
+
+*.floatright {
+	float: right;
+}
+
+*.clearright {
+	clear: right;
+}
+
+article > div.end {
+	clear: both;
+}
+
+
+/* Fonts */
+
+@font-face {
+	font-family: "Swiss 721 BT";
+	src: url("swiss-721-bt-normal.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Swiss 721 BT";
+	src: url("swiss-721-bt-medium.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Swiss 721 BT";
+	src: url("swiss-721-bt-medium-italic.ttf") format("truetype");
+	font-weight: bold;
+	font-style: italic;
+}
