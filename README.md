@@ -7,6 +7,7 @@ Features
 --------
 
 - Master Theorem Solver
+- Red-Black BST with visualization (third-party in Other folder)
 - Sorting
     - Insertion sort
     - Merge sort
