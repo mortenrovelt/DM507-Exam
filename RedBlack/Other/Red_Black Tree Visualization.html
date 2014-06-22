@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		
+		<title>
+			Red/Black Tree Visualization 
+		</title>
+		
+		<!-- css sheet for how the page is laid out -->
+		
+		<link rel="stylesheet" href="Red_Black%20Tree%20Visualization-filer/visualizationPageStyle.css">
+			
+			
+		<!-- jqueury stuff.  Only used for the animation speed slider. -->
+		<link rel="stylesheet" href="Red_Black%20Tree%20Visualization-filer/jquery-ui-1.css">				
+		<script src="Red_Black%20Tree%20Visualization-filer/jquery-1.js"></script>
+		<script src="Red_Black%20Tree%20Visualization-filer/jquery-ui-1.js"></script>
+				
+		<!-- Javascript for the actual visualization code -->
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/CustomEvents.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/UndoFunctions.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/AnimatedObject.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/AnimatedLabel.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/AnimatedCircle.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/AnimatedRectangle.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/AnimatedLinkedList.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/HighlightCircle.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/Line.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/ObjectManager.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/AnimationMain.js"> </script>
+
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/Algorithm.js"> </script>
+		<script type="text/javascript" src="Red_Black%20Tree%20Visualization-filer/RedBlack.js"> </script> 
+				
+			
+	 </head> 
+	
+	<body onload="init();" class="VisualizationMainPage">
+		
+		<div id="container">
+			
+			<div id="header">  
+				<h1>Red/Black Tree</h1>
+			</div>
+			
+			<div =="" id="mainContent"> 
+				
+				<div id="algoControlSection">
+					<!-- Table for buttons to control specific animation (insert/find/etc) -->
+					<!-- (filled in by javascript code specific to the animtion) -->
+                    <table id="AlgorithmSpecificControls"> <td><input size="4" name="" type="Text"></td><td><input name="Insert" value="Insert" type="Button"></td><td><input size="4" name="" type="Text"></td><td><input name="Delete" value="Delete" type="Button"></td><td><input size="4" name="" type="Text"></td><td><input name="Find" value="Find" type="Button"></td><td><input name="Print" value="Print" type="Button"></td><td><input value="Show Null Leaves" type="checkbox">Show Null Leaves</td></table>
+				</div>
+				
+					<!-- Drawing canvas where all animation is done.  Note:  can be resized in code -->
+									
+				<canvas id="canvas" width="1000" height="500"></canvas>
+				
+				<div id="generalAnimationControlSection">
+					<!-- Table for buttons to control general animation (play/pause/undo/etc) -->
+					<!-- (filled in by javascript code, specifically AnimationMain.js)  -->
+
+					<table id="GeneralAnimationControls">  <td><input disabled="disabled" value="Skip Back" type="Button"></td><td><input disabled="disabled" value="Step Back" type="Button"></td><td><input value="pause" type="Button"></td><td><input disabled="disabled" value="Step Forward" type="Button"></td><td><input disabled="disabled" value="Skip Forward" type="Button"></td><td><table><tr><td><div style="width:200px" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" float="left" display="inline-block"><a style="left: 75%;" class="ui-slider-handle ui-state-default ui-corner-all" href="#"></a></div></td></tr><tr><td align="center">Animation Speed</td></tr></table></td><td> w:</td><td><input size="4" value="1000" type="Text"></td><td>       h:</td><td><input size="4" value="500" type="Text"></td><td><input value="Change Canvas Size" type="Button"></td><td><input value="Move Controls" type="Button"></td></table>		
+				</div>
+				
+			</div> <!-- mainContent -->
+			
+			<div id="footer">  
+				<p><a href="https://www.cs.usfca.edu/%7Egalles/visualization/Algorithms.html">Algorithm Visualizations</a></p>
+			</div>
+
+		</div><!-- container -->
+
+<script>
+// Added by Peter
+$("#AlgorithmSpecificControls").find("tbody").hide();
+$("#GeneralAnimationControls").find("tbody").hide();
+</script>
+	
+
+</body></html>
