@@ -19,16 +19,16 @@ public class Solver {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("a: ");
-        int a = sc.nextInt();
+        double a = sc.nextDouble();
 
         System.out.print("b: ");
-        int b = sc.nextInt();
+        double b = sc.nextDouble();
 
         System.out.print("k: ");
-        float k = sc.nextFloat();
+        double k = sc.nextDouble();
 
         System.out.print("i: ");
-        int i = sc.nextInt();
+        double i = sc.nextDouble();
 
         double p = Math.log(a) / Math.log(b);
 
@@ -58,7 +58,7 @@ public class Solver {
     }
 
 
-    public static String formatPolyLog(float k, int i) {
+    public static String formatPolyLog(double k, double i) {
         StringBuilder sb = new StringBuilder();
 
         if (k == 0 && i == 0) {
@@ -86,7 +86,7 @@ public class Solver {
     }
 
     public static boolean nearlyEqual(double a, double b) {
-        return nearlyEqual(a, b, 0.000);
+        return nearlyEqual(a, b, 0.0001);
     }
 
     public static boolean nearlyEqual(double a, double b, double epsilon) {
